@@ -52,7 +52,6 @@
                     img{
                         width: 100%;
                         display: block;
-                        height: 314px;
                         border: 1px solid #fafafa;
                     }
                 }
@@ -65,6 +64,11 @@
     @import "../../css/element.scss";
     .panel{
         @include panel;
+        >h4{
+            display: block;
+            margin-left: 0;
+            text-align: center;
+        }
         .content{
             padding-bottom: 40px;
             position: relative;

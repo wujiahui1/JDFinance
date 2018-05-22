@@ -4,7 +4,7 @@
         <div :class="$style.main">
             <div :class="$style.mainInfo">
                 <p>会员等级</p>
-                <p>立即登入&nbsp;马上赚钱</p>
+                <p>立即登入&nbsp;马上赚钱!</p>
                 <p>签到</p>
             </div>
         </div>
@@ -16,16 +16,13 @@
                 </router-link>
             </div>
         </section>
-        <div :class="$style.imgInfo">
-            <img src="">
-            <img src="">
-        </div>
-
     </article>
 </template>
 
 <script>
     import Slider from "../core/slider";
+    //轮播图
+
     export default {
         name: "mslider",
         components: {
@@ -59,7 +56,8 @@
                 },{
                     img: "//img12.360buyimg.com/jrpmobile/jfs/t17563/145/489151866/3943/bed46aef/5a8440cfN4a1fabc3.png?width=90&height=90",
                     title: "全部"
-                }]
+                }],
+
             }
         }
 
@@ -69,13 +67,15 @@
 <style lang="scss" module>
     @import "../../css/element.scss";
     .slider{
-        margin-top: 120px;
+        margin-top: 92px;
         img{
             width: 100%;
         }
     }
     .list{
         @include list;
+        margin-top: 140px;
+        justify-content: space-around;
         .item{
             width: 20%;
             text-align: center;
@@ -89,25 +89,54 @@
         }
     }
     .main{
-        width:100%;
-        height: 130px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 24px;
         .mainInfo{
-            width: 686px;
-            height: 100%;
+            /* 为什么width写600px 而京东上面写的是343 *2 px?*/
+            width: 92%;
             z-index: 99;
-            position: relative;
-            magin: 0 auto;
-            top: -18px;
-            left: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: absolute;
+            background: white;
+            text-align: center;
+            color: #515151;
+            margin-left: 4%;
+            margin-top: -14px;
             p{
-                font-size: 28px;
                 float:left;
-                &:nth-child(1){
+                overflow: hidden;
 
+                &:nth-child(1){
+                    width: 92px;
+                    height: 66px;
+                    line-height: 66px;
+                    background: yellow;
+                    margin-top: 32px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    font-size: 16px;
+                }
+                &:nth-child(2){
+                    line-height: 130px;
+                    font-size: 24px;
+                    margin: 0 auto;
+                }
+                &:nth-child(3){
+                    width: 92px;
+                    height: 66px;
+                    text-align:center;
+                    line-height: 66px;
+                    background: red;
+                    border-radius: 4px;
+                    float:right;
+                    font-size: 24px;
+                    margin-top: 32px;
+                    margin-right: 20px;
                 }
             }
         }
     }
-
 
 </style>

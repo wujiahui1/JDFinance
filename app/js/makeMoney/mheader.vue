@@ -21,6 +21,8 @@
         z-index: 100;
         width:100%;
         height: 90px;
+        background: white;
+        border-bottom: 1px solid #ddd;
         p{
             color: #333;
             line-height: 88px;
